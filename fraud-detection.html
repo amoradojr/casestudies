@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case Study: Fraud Detection and Mitigation | Antonio Morado Jr</title>
+<meta name="description" content="Building a fraud detection system from raw order data, later formalized into a dedicated department.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body><div class="wrap">
+
+<a class="backlink" href="index.html">&larr; All case studies</a>
+<div class="kicker">Case Study: Fraud Detection and Mitigation</div>
+<h1>Pattern Recognition from the Ground Up: Building Montway&#x27;s Fraud Detection System</h1>
+<div class="byline">Antonio Morado Jr  |  GPU Product Manager &amp; Customer Experience Manager  |  Montway Auto Transport  |  2017 – 2021</div>
+<hr class="divider">
+<div class="glance-label">AT A GLANCE</div>
+<div class="metric"><b>$250k+</b>in fraud liability mitigated through prevention and early detection</div>
+<div class="metric"><b>~1 month</b>to build initial detection framework from raw order data</div>
+<div class="metric"><b>20%</b>of ongoing time to maintain and evolve the system</div>
+<div class="metric"><b>3</b>tools used: Periscope order data, self-built spreadsheets, IP lookup tools</div>
+<div class="tagline">Framework handed to Claims and eventually formalized into a dedicated internal department that continues to operate today.</div>
+<hr class="divider">
+<h2>THE SITUATION</h2>
+<p>Montway had no formal fraud detection system. There were no defined protocols, no documented patterns, no dedicated function. Fraud existed the way it exists in most companies that aren&#x27;t looking for it: invisibly, until something went obviously wrong.</p>
+<p>As a supervisor and later as the GPU Product Manager, I had encountered fraud in scattered forms. Drugs found in vehicles during transport. Stolen vehicles moving through the network. Orders placed with stolen credit cards. Each incident was handled as an isolated event rather than evidence of a pattern. Nobody was connecting the dots because nobody had been asked to.</p>
+<p>That changed when Guaranteed Pickup started attracting a specific type of fraudulent order. The urgency was a tell. Legitimate customers booking a guaranteed service generally have a predictable lead time. These orders wanted pickup as soon as possible. The credit cards were stolen. The customers were unreachable. And the delivery locations were wrong in a very specific way.</p>
+<h2>FIRST CONTACT: RECOGNIZING THE PATTERN</h2>
+<p>Fraudulent GPU orders shared a set of behavioral characteristics that became recognizable once I started looking. Nobody was present to release the vehicle at pickup. Nobody was present to accept it at delivery. The drop-off locations were not residential addresses or commercial businesses. They were empty lots, industrial parks, and locations in close proximity to major ports, with New Jersey appearing consistently as a primary destination.</p>
+<p>Port Newark and Port Elizabeth are among the largest vehicle export facilities in the country. Vehicles stolen or fraudulently acquired through auto transport brokers and delivered near those ports have a predictable next stop: containerized export, most likely overseas. The geography was not a coincidence. It was a logistics signature.</p>
+<p>I also noticed geographic clustering in the origin of the orders. After researching the IP addresses being used to place bookings, I found significant concentrations originating from outside the United States, with Africa representing a primary source. I documented the findings and brought them to the company. The result was a company-level decision to ban IP addresses associated with those regions from placing orders. That was the first policy change to come directly from my detection work.</p>
+<blockquote>I wasn&#x27;t assigned to find fraud. I noticed it while doing something else, recognized what I was looking at, and started documenting it. That is how most fraud detection actually works in organizations that aren&#x27;t actively looking for it.</blockquote>
+<h2>EVOLVING THE SYSTEM: CX MANAGER PHASE</h2>
+<p>When I moved into the Customer Experience Manager role in November 2018, the fraud work didn&#x27;t stop. It evolved. The nature of the fraud we were seeing had expanded beyond stolen credit cards and vehicle export schemes. We began receiving increased volumes of calls from people reporting orders placed in their name using their personal information without their knowledge. Identity theft, operating through an auto transport broker as the mechanism.</p>
+<p>Without a proper CRM, connecting these cases required manual work. I used Periscope to pull and cross-reference order data, and I maintained the spreadsheets I had started building during the GPU phase as my primary documentation tool. The goal was to identify rings rather than individual incidents: groupings of orders that shared customer names, delivery locations, vehicle types, carrier patterns, or booking behaviors that suggested coordinated activity rather than isolated fraud.</p>
+<p>The geographic concentrations became clearer with more data. Texas, Florida, and New Jersey emerged as primary targets alongside a rotating set of secondary locations. Vehicle types clustered in ways that suggested specific end markets. Customer information was being reused and slightly modified across multiple orders in patterns that became recognizable once enough data was in the spreadsheet.</p>
+<p>The scope of what we were seeing also expanded. Beyond credit card fraud and vehicle export, I identified connections suggesting drug trafficking routes, with vehicles being used as payment instruments in other dealings. Auto transport is a low-scrutiny logistics channel compared to other freight modes. That made it attractive for a range of criminal uses beyond the obvious ones.</p>
+<blockquote>The spreadsheet was not a sophisticated tool. What made it work was the discipline to document every case consistently and the patience to let patterns emerge from the accumulation of data rather than trying to find the answer before the data was ready to give it.</blockquote>
+<h2>THE METHODOLOGY</h2>
+<h3>Tools</h3>
+<p>The detection system I built used three tools: Periscope for accessing and querying order data, self-built spreadsheets for documenting and cross-referencing cases, and publicly available IP lookup services for tracing the geographic origin and spam or fraud association of booking IP addresses. There was no dedicated fraud software, no machine learning, no formal data infrastructure. The system was built entirely on pattern recognition, manual documentation, and consistent methodology.</p>
+<h3>The Profile</h3>
+<p>Over time I developed a working behavioral profile for fraudulent orders that drew on multiple data signals simultaneously. Delivery location type and geographic clustering were the strongest indicators. Customer reachability was a secondary signal. Booking urgency, vehicle type, payment method patterns, and the reuse or slight modification of customer information across multiple orders all contributed to the overall picture.</p>
+<p>No single signal was definitive. A customer who was hard to reach was not necessarily a fraudster. An industrial delivery location was not automatically suspicious. What made the system work was the combination of signals, weighted by the patterns I had built up through documented cases over time.</p>
+<h3>The Process</h3>
+<p>When a suspicious order was identified, I would research the customer information and delivery location, cross-reference against existing documented cases, check the booking IP address against fraud and spam databases, and document my findings. Cases with sufficient evidence were brought to Claims with a recommendation to cancel the order and blacklist the associated names, locations, and IP addresses.</p>
+<p>The initial build took approximately one month to reach a point where I had enough documented patterns to present a credible case. From there, maintaining and evolving the system took roughly 20% of my ongoing time. It was not glamorous work. It was methodical, repetitive, and detail-dependent. That is exactly what effective fraud detection requires.</p>
+<h2>THE OUTCOMES</h2>
+<p>The direct financial outcome was more than $250k in mitigated liability, representing a combination of losses prevented through early detection and actual fraud cases caught and stopped before they completed. That figure represents only what I was able to document and attribute. The actual impact was likely higher given the volume of orders that were affected by the policy changes, blacklists, and IP bans that came out of the work.</p>
+<p>Beyond the financial figure, the work produced several lasting structural changes at Montway. The IP address bans based on my initial GPU findings represented a company-level policy change driven by field observation rather than top-down initiative. The blacklisted names and locations became part of the booking verification process. And the framework I built, the methodology, the documentation standards, the escalation process, became the operational foundation for a dedicated fraud detection department within Claims that continues to operate today.</p>
+<p>I was not part of building that department. By the time it was formalized, I had moved into the Marketing function and handed the work to a seasoned Claims agent. What I left behind was a documented system, a trained set of pattern recognition criteria, and a track record of results that made the case for resourcing the function properly.</p>
+<blockquote>I built the system with three tools and 20% of my time. The company eventually decided it was worth a full department. That gap between what I had and what the outcome warranted is its own kind of evidence.</blockquote>
+<h2>WHAT I WOULD DO DIFFERENTLY</h2>
+<p>The most significant constraint throughout this work was the absence of a proper CRM. Manual cross-referencing in Periscope and spreadsheets worked, but it was slow, labor-intensive, and dependent on my personal discipline to stay consistent. With a proper data infrastructure, the same patterns I identified manually could have been detected faster, at greater scale, and with less reliance on a single person&#x27;s attention.</p>
+<p>I would have pushed harder for even basic tooling support earlier in the process. Not because the manual approach failed, but because the ceiling on what was possible with it was low. There were almost certainly patterns I missed because the data was too fragmented to see them without better tools.</p>
+<p>I would also have formalized the documentation standards from the beginning rather than building them incrementally. The spreadsheets I started in GPU were functional but they weren&#x27;t designed for handoff. When I transitioned out of the work, a significant amount of institutional knowledge lived in my head rather than in the documentation. The Claims agent who took over was capable, but she was working from a system I had built for myself rather than one designed to be transferred.</p>
+<p>The broader lesson is one that applies to most of the work I&#x27;ve built from scratch: the system you need for yourself is rarely the system someone else needs to run after you. Building for succession requires a different kind of discipline than building for execution, and I&#x27;ve had to learn that distinction more than once.</p>
+<h2>WHAT THIS CASE STUDY DEMONSTRATES</h2>
+<p>This is a data analysis and pattern recognition story that happened to be about fraud. The underlying skills are the same ones that apply to customer behavior analysis, operational diagnostics, or any context where the goal is to find a signal in a large volume of noisy data without a defined methodology to start from.</p>
+<p>What made it work was not sophisticated tooling or formal training in fraud detection. It was the discipline to document consistently, the patience to let patterns accumulate before drawing conclusions, the cross-functional credibility to get Claims and leadership to act on findings, and the instinct to recognize that scattered incidents were actually connected data points waiting to be mapped.</p>
+<p>Those are transferable skills. The domain changes. The approach to finding what is actually happening underneath what appears to be happening does not.</p>
+<footer>Antonio Morado Jr &nbsp;|&nbsp; Wilsonville, OR &nbsp;|&nbsp; <a href="mailto:a.moradojr@gmail.com">a.moradojr@gmail.com</a> &nbsp;|&nbsp; <a href="https://linkedin.com/in/antoniomoradojr">LinkedIn</a></footer>
+</div></body></html>
